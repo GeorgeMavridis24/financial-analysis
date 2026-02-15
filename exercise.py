@@ -3,7 +3,7 @@ from openai import OpenAI
 import yfinance as yf
 
 # Replace "your_api_key_here" with your actual OpenAI API key
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="YOUR API KEY")
 
 st.title('Interactive Financial Stock Market Comparative Analysis Tool')
 
@@ -49,4 +49,5 @@ if st.button('Comparative Performance'):
             {"role": "user", "content": f"This is the {selected_stock} stock data : {stock_data}, this is {selected_stock2} stock data: {stock_data2}"}
           ]
     )
+
   st.write(response.choices[0].message.content)
